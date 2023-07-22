@@ -1,9 +1,9 @@
 import React from 'react'
 
-const mentorHome = () => {
+const MentorHome = () => {
   return (
-    <div>mentorHome</div>
+    <div>MentorHome</div>
   )
 }
 
-export default mentorHome
+export default MentorHome
