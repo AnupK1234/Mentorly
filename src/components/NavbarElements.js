@@ -9,6 +9,8 @@ display: flex;
 justify-content: space-between;
 padding: 0.2rem calc((100vw - 1000px) / 2);
 z-index: 12;
+position:sticky;
+top:0;
 /* Third Nav */
 /* justify-content: flex-start; */
 `;
@@ -21,6 +23,7 @@ text-decoration: none;
 padding: 0 1rem;
 height: 100%;
 cursor: pointer;
+font-size:1.1rem;
 &.active {
 	color: #000000;
 }
