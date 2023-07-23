@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { useAuth0 } from '@auth0/auth0-react';
 
 const Home = () => {
-  const { loginWithRedirect, isAuthenticated, user } = useAuth0();
+  const { loginWithRedirect, isAuthenticated, user,logout } = useAuth0();
 
   return (
     <div className="bg-gradient-to-r from-green-400 to-lightGreen-500 p-3">
@@ -54,6 +54,12 @@ const Home = () => {
                 >
                   Switch to Mentee Dashboard
                 </Link>
+                <button
+                  onClick={() => logout({ returnTo: window.location.origin })}
+                  className="bg-red-500 text-white py-2 px-6 rounded-lg font-semibold shadow hover:bg-red-600 hover:text-white transition duration-300"
+                >
+                  Logout
+                </button>
               </div>
             </div>
           ) : (
