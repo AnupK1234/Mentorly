@@ -2,8 +2,6 @@ import React from 'react';
 import {
   Bars,
   Nav,
-  NavBtn,
-  NavBtnLink,
   NavLink,
   NavMenu,
 } from './NavbarElements';
@@ -33,15 +31,9 @@ const Navbar = () => {
           <NavLink to='/blogs' activeStyle>
             Blogs
           </NavLink>
-          <NavLink to='/sign-up' activeStyle>
-            Sign Up
-          </NavLink>
           {/* Second Nav */}
           {/* <NavBtnLink to='/sign-in'>Sign In</NavBtnLink> */}
         </NavMenu>
-        <NavBtn>
-          <NavBtnLink to='/signin'>Sign In</NavBtnLink>
-        </NavBtn>
       </Nav>
     </>
   )
