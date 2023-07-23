@@ -1,7 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { useAuth0 } from '@auth0/auth0-react';
 
 const Home = () => {
+  const { loginWithRedirect, isAuthenticated, user } = useAuth0();
+
   return (
     <div className="bg-gradient-to-r from-green-400 to-lightGreen-500 p-3">
       <section className="py-16">
@@ -32,20 +35,43 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="bg-lightGreen-100 py-12 text-center">
+       <section className="bg-lightGreen-100 py-12 text-center">
         <div className="container mx-auto">
-          <h2 className="text-2xl font-semibold text-black mb-4">Ready to Get Started?</h2>
-          <div className="flex justify-center space-x-4">
-            <Link to="/sign-up" className="bg-white text-green-500 py-2 px-6 rounded-lg font-semibold shadow hover:bg-green-500 hover:text-white transition duration-300">
-              Sign Up Now
-            </Link>
-            <Link to="/login-mentor" className="bg-green-500 text-white py-2 px-6 rounded-lg font-semibold shadow hover:bg-green-600 hover:text-white transition duration-300">
-              Login as Mentor
-            </Link>
-            <Link to="/login-mentee" className="bg-green-500 text-white py-2 px-6 rounded-lg font-semibold shadow hover:bg-green-600 hover:text-white transition duration-300">
-              Login as Mentee
-            </Link>
-          </div>
+          {isAuthenticated ? (
+            <div>
+              <h2 className="text-2xl font-semibold text-black mb-4">Welcome, {user.name}!</h2>
+              <p className="text-lg text-gray-800 mt-2">{user.email}</p>
+              <div className="flex justify-center space-x-4 mt-4">
+                <Link
+                  to="/mentor"
+                  className="bg-white text-green-500 py-2 px-6 rounded-lg font-semibold shadow hover:bg-green-500 hover:text-white transition duration-300"
+                >
+                  Switch to Mentor Dashboard
+                </Link>
+                <Link
+                  to="/mentee"
+                  className="bg-white text-green-500 py-2 px-6 rounded-lg font-semibold shadow hover:bg-green-500 hover:text-white transition duration-300"
+                >
+                  Switch to Mentee Dashboard
+                </Link>
+              </div>
+            </div>
+          ) : (
+            <div className="flex justify-center space-x-4">
+              <Link
+                to="/sign-up"
+                className="bg-white text-green-500 py-2 px-6 rounded-lg font-semibold shadow hover:bg-green-500 hover:text-white transition duration-300"
+              >
+                Sign Up Now
+              </Link>
+              <button
+                onClick={() => loginWithRedirect()}
+                className="bg-green-500 text-white py-2 px-6 rounded-lg font-semibold shadow hover:bg-green-600 hover:text-white transition duration-300"
+              >
+                Login with Auth0
+              </button>
+            </div>
+          )}
         </div>
       </section>
     </div>
