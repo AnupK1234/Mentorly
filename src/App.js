@@ -6,6 +6,7 @@ import Event from "./components/event";
 import Goals from "./components/goals";
 import Mentor from "./components/mentor/Mentor";
 import Mentee from "./components/mentee/Mentee";
+import Home from "./components/Home";
 
 function App() {
   return (
