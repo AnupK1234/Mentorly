@@ -1,9 +1,9 @@
 import React from 'react'
 
-const MenteeHome = () => {
+const Mentee = () => {
   return (
-    <div>MenteeHome</div>
+    <div>Mentee</div>
   )
 }
 
-export default MenteeHome
+export default Mentee
