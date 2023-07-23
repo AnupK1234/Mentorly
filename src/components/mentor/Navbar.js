@@ -8,7 +8,6 @@ const Navbar = () => {
     { path: '/mentorship_history', title: 'Mentorship History' },
     { path: '/create_new_meeting', title: 'Create New Meeting' },
     { path: '/mentorship_progress_tracking', title: 'Mentorship Progress Tracking' },
-    { path: '/resource_library', title: 'Resources Library' },
     { path: '/feedback_and_ratings', title: 'Feedback and Ratings' },
     { path: '/notifications', title: 'Notifications' },
     { path: '/calendar_integration', title: 'Calendar Integration' },
