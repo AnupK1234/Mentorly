@@ -7,15 +7,6 @@ import Goals from "./components/goals";
 import Mentor from "./components/mentor/Mentor";
 import Mentee from "./components/mentee/Mentee";
 import Home from "./components/Home";
-import MentorshipRequests from './components/mentor/MentorshipRequest';
-import CalendarIntegration from './components/mentor/CalendarIntegration';
-import CreateNewMeeting from './components/mentor/CreateNewMeeting';
-import FeedbackAndRatings from './components/mentor/FeedbackAndRatings';
-import MentorSettings from './components/mentor/MentorSettings';
-import MentorshipHistory from './components/mentor/MentorshipHistory';
-import MentorshipProgressTracking from './components/mentor/MentorshipProgressTracking';
-import Notifications from './components/mentor/Notifications';
-import MentorshipTipsAndResources from './components/mentor/MentorshipTipsAndResources';
 
 function App() {
   return (
