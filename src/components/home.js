@@ -6,7 +6,7 @@ const Home = () => {
     <div className="bg-gradient-to-r from-green-400 to-lightGreen-500 p-3">
       <section className="py-16">
         <div className="container mx-auto text-center">
-          <h1 className="text-4xl font-bold text-black">Welcome to Mentor-Mentee Connect!</h1>
+          <h1 className="text-4xl font-bold text-black">Welcome to Mentorly!</h1>
           <p className="text-lg text-gray-800 mt-4">Connecting mentors and mentees to empower growth and learning.</p>
         </div>
       </section>
