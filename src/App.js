@@ -34,7 +34,7 @@ function App() {
           <Route path="/" element={<Home/>} exact/>
           <Route path="/blogs" element={<Blog/>} exact/>
           <Route path="/events" element={<Event/>} exact/>
-          <Route path="/goals" element={<Goals/>} exact/>
+          <Route path="/goal" element={<Goals/>} exact/>
           <Route path="/mentor" element={<Mentor/>} exact/>
           <Route path="/mentee" element={<Mentee/>} exact/>
           <Route path="/mentorship_requests" element={<MentorshipRequests/>} exact/>
